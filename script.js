@@ -1,5 +1,6 @@
 // Дан массив с числами.
 //Сделайте из него массив, состоящий из квадратов этих чисел.
+let arr = [2, 2, 8, 4, 4, 6, 6, 6, 5, -10, 0];
 
 (function sqrt() {
   let arr = [2, 2, 8, 4, 4, 6, 6, 6, 5, -10, 0];
@@ -83,11 +84,24 @@
 })();
 
 //Дана строка Верните количество слов в строке, длина которых больше 4 символов.
-(function getString() {
- 
+(function getString4() {
+  let str = '   ipsum sapsum   dolor emit   lol ';
+  str = str.trim().replace(/[ ]{1,}/g, ' ');
+  str = str.split(' ');
+  let words = 0;
+  str.forEach((e) => {
+    if (e.length > 4) {
+      words++;
+    }
+  });
+  console.log(`count: ${words}`);
 })();
 
 // Если в строке имеется шестизначный номер - верните его, как результат функции
-(function getString() {
-  
+(function getNum6() {
+  let str = '   ipsum sapsum    dolor emit 123456 12345 123456789';
+  str = str.trim().replace(/[]{1,}/g, ' ');
+  str = split(' ');
+  let counter = null;
+
 })();
