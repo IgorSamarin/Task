@@ -106,8 +106,15 @@ let arr = [2, 2, 8, 4, 4, 6, 6, 6, 5, -10, 0];
 })();
 // Если в строке имеется шестизначный номер - верните его, как результат функции
 (function getNum6() {
-  let str = '   ipsum sapsum    dolor emit 123456 12345 123456789';
-  str = str.trim().replace(/[]{1,}/g, ' ');
-  str = str.split(' ');
-  let counter = null;
+  let str = '   ipsum sapsum    123455   dolor emit   lol   456 123456 123456789';
+  str = str.trim().split(' ');
+  str = str.filter((e) => e.length == 6);
+  let counter = 0;
+  str.forEach((e) => {
+    e = Number(e);
+    if (!isNaN(e)) {
+      counter++;
+    }
+  });
+  console.log(`v2 count: ${counter}`);
 })();
