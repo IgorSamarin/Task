@@ -99,14 +99,9 @@ let arr = [2, 2, 8, 4, 4, 6, 6, 6, 5, -10, 0];
 // Вариант 2
 (function getString4() {
   let str = '   ipsum sapsum       dolor emit   lol ';
-  str = str.trim();
-  str = str.split(' ');
-  str = str.filter((e) => e.length != 0);
+  str = str.trim().split(' ');
   str = str.filter((e) => e.length > 4);
-  let counter = 0
-  str.forEach(e =>{
-    
-  })
+  let counter = 0;
   console.log(`v2 count: ${str.length}`);
 })();
 // Если в строке имеется шестизначный номер - верните его, как результат функции
